@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.features.characterdetail.CharacterDetailFragment">
+
+<ProgressBar
+    android:id="@+id/progress_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:indeterminate="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:visibility="gone"
+
+
+    tools:ignore="MissingConstraints" />
+
+
+
+<ImageView
+    android:id="@+id/image"
+    android:layout_width="0dp"
+    android:layout_height="350dp"
+    android:scaleType="centerCrop"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:text="TextView"
+    android:textSize="30sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintTop_toBottomOf="@+id/image"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:ignore="MissingConstraints" />
+
+<TextView
+    android:id="@+id/species_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:text="Species"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintEnd_toStartOf="@+id/guideline"
+    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+    app:layout_constraintTop_toBottomOf="@+id/name" />
+
+<TextView
+    android:id="@+id/species"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    tools:text="TextView"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintStart_toEndOf="@+id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/species_text"
+    app:layout_constraintBottom_toBottomOf="@+id/species_text"
+    />
+
+<TextView
+    android:id="@+id/status_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Status"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+    app:layout_constraintEnd_toStartOf="@+id/guideline"
+    app:layout_constraintTop_toBottomOf="@+id/species_text" />
+
+<TextView
+    android:id="@+id/status"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    tools:text="TextView"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintStart_toEndOf="@+id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/status_text"
+    app:layout_constraintBottom_toBottomOf="@+id/status_text" />
+
+<TextView
+    android:id="@+id/gender_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Gender"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintEnd_toStartOf="@+id/guideline"
+    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+    app:layout_constraintTop_toBottomOf="@+id/status_text" />
+<TextView
+    android:id="@+id/gender"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    tools:text="TextView"
+    android:textSize="18sp"
+    app:layout_constraintStart_toEndOf="@+id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintTop_toTopOf="@+id/gender_text"
+    app:layout_constraintBottom_toBottomOf="@+id/gender_text" />
+<TextView
+    android:id="@+id/origin_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Origin"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintEnd_toStartOf="@+id/guideline"
+    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+    app:layout_constraintTop_toBottomOf="@+id/gender_text" />
+
+<TextView
+    android:id="@+id/origin"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    tools:text="TextView"
+    app:layout_constraintStart_toEndOf="@+id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintTop_toTopOf="@+id/origin_text"
+    app:layout_constraintBottom_toBottomOf="@+id/origin_text" />
+<TextView
+    android:id="@+id/location_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Location "
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintEnd_toStartOf="@+id/guideline"
+    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+    app:layout_constraintTop_toBottomOf="@+id/origin_text" />
+
+<TextView
+    android:id="@+id/location"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    tools:text="TextView"
+    app:layout_constraintStart_toEndOf="@+id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textSize="18sp"
+    style="@style/TextAppearance.AppCompat.Title"
+    app:layout_constraintTop_toTopOf="@+id/location_text"
+    app:layout_constraintBottom_toBottomOf="@+id/location_text" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="110dp" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline_start"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
